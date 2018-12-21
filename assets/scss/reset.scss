@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+/* 样式重置 */
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  font,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  dd,
+  dl,
+  dt,
+  li,
+  ol,
+  ul,
+  fieldset,
+  form,
+  label,
+  legend {
+      margin: 0;
+      padding: 0;
+      border: 0 none;
+      outline: 0;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  }
+  img {
+      display: block;
+      border: 0 none;
+  }
+  p {
+      margin-bottom: 0;
+  }
+  body,
+  a,
+  input,
+  button {
+      font-family:"PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB","Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      outline: none;
+      color: #666;
+      text-decoration: none;
+  }
+
+  ul, li {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  /* 清除点击出现虚拟框 */
+  a{
+      color: #428bca;
+      outline:none;
+      text-decoration:none;
+      -webkit-tap-highlight-color:rgba(0,0,0,0);
+  }
+  a:focus {
+      outline:0;
+  }
+
+  input, textarea, select {
+      outline:none;
+  }
+
+  table {
+      text-align: center;
+      vertical-align: middle;
+  }
+
+  th {
+      text-align: center;
+      vertical-align: middle;
+  }
+
+  @media (min-width: 750px) {
+    html {
+      font-size: 80px;
+    }
+  }
+  @media (max-width: 750px) {
+    html {
+      font-size: 100px;
+    }
+  }
+  @media (max-width: 736px) {
+    html {
+      font-size: 98.1333333333px;
+    }
+  }
+  @media (max-width: 732px) {
+    html {
+      font-size: 97.6px;
+    }
+  }
+  @media (max-width: 731px) {
+    html {
+      font-size: 97.4666666667px;
+    }
+  }
+  @media (max-width: 667px) {
+    html {
+      font-size: 88.9333333333px;
+    }
+  }
+  @media (max-width: 640px) {
+    html {
+      font-size: 85.3333333333px;
+    }
+  }
+  @media (max-width: 600px) {
+    html {
+      font-size: 80px;
+    }
+  }
+  @media (max-width: 568px) {
+    html {
+      font-size: 75.7333333333px;
+    }
+  }
+  @media (max-width: 533px) {
+    html {
+      font-size: 71.0666666667px;
+    }
+  }
+  @media (max-width: 435px) {
+    html {
+      font-size: 58px;
+    }
+  }
+  /* 浮点数计算有误 */
+  @media (max-width: 414.4px) {
+    html {
+      font-size: 55.2533333333px;
+    }
+  }
+  @media (max-width: 411px) {
+    html {
+      font-size: 54.8px;
+    }
+  }
+  @media (max-width: 396px) {
+    html {
+      font-size: 52.8px;
+    }
+  }
+  @media (max-width: 393px) {
+    html {
+      font-size: 52.4px;
+    }
+  }
+  @media (max-width: 384px) {
+    html {
+      font-size: 51.2px;
+    }
+  }
+  /* 浮点数计算有误 */
+  @media (max-width: 375.3px) {
+    html {
+      font-size: 50.04px;
+    }
+  }
+  @media (max-width: 360px) {
+    html {
+      font-size: 48px;
+    }
+  }
+  @media (max-width: 320px) {
+    html {
+      font-size: 42.6666666667px;
+    }
+  }

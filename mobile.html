@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/scss/reset.css">
+  <link rel="stylesheet" href="./assets/scss/mobile.css">
+</head>
+<body>
+  <div class="mobile-box">
+    <div class="header">
+      <h3>Wi-Fi 链接成功</h3>
+      <img src="./assets/img/img_ic_white_136.svg" alt="">
+      <p>扫码自由购 商品送到家</p>
+    </div>
+    <a href="https://a.app.qq.com/o/simple.jsp?pkgname=com.weihe.myhome">下载瓴里 App</a>
+    <img src="./assets/img/store_bg_download.png" alt="">
+  </div>
+  <script>
+    const os = () => {
+      const u = window.navigator.userAgent;
+
+      return {
+        // 不同浏览器及终端
+        isWechat: !!u.match(/MicroMessenger/i),
+        isQQ: !!u.match(/QQ/i),
+        isAndroid: !!u.match(/(Android);?[\s/]+([\d.]+)?/),
+        isiPhone: !!u.match(/(iPhone\sOS)\s([\d_]+)/),
+        isDeskTop: (() => {
+          const u = window.navigator.userAgent;
+          const Agents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod', 'okhttp/3.9.1'];
+          let flag = true;
+          for (let i = 0, LEN = Agents.length; i < LEN; i++) {
+            if (u.indexOf(Agents[i]) !== -1) {
+              flag = false;
+              break;
+            }
+          }
+          return flag;
+        })()
+      };
+    };
+
+    const downBtn = document.querySelector('.mobile-box>a');
+    if (os().isWechat || os().isQQ) {
+      downBtn.href = 'https://a.app.qq.com/o/simple.jsp?pkgname=com.weihe.myhome';
+    } else if (os().isAndroid) {
+      downBtn.href = 'https://download.lanehub.cn/android?channel=a2';
+    } else if (os().isiPhone) {
+      downBtn.href = 'https://itunes.apple.com/cn/app/id1319173852?mt=8';
+    }
+  </script>
+</body>
+</html>

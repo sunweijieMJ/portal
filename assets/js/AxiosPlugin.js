@@ -1,6 +1,6 @@
 import axios from './axios';
 import linsign from './signFun';
-const baseURL = 'https://portal.weiheinc.com/';
+const baseURL = 'https://portal.lanehub.cn';
 
 // axios 配置
 const Axios = axios.create({

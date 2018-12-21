@@ -46,7 +46,7 @@ submit.addEventListener('click', () => {
   if(checkTel(mobile) && checkCode(code)) {
     Axios.post('/dynamic_login', { mobile, code}).then(res => {
       const params = { store_id: 2, mobile, service: parseUrl().service };
-      const url = `https://portal.weiheinc.com/api/portal/create_ticket?${linsign.urlConcat(params)}`;
+      const url = `/api/portal/create_ticket?${linsign.urlConcat(params)}`;
       fetch(url, { method: 'GET' }).then(response => {
         response.json().then(res => {
           console.log(res);

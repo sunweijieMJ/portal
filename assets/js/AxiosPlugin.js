@@ -1,6 +1,6 @@
 import axios from './axios';
 import linsign from './signFun';
-const baseURL = 'https://api.lanehub.cn/';
+const baseURL = 'https://portal.weiheinc.com/';
 
 // axios 配置
 const Axios = axios.create({
@@ -40,7 +40,7 @@ const outApi = {
     return apiAxios('GET', url, params);
   },
   post: (url, params) => {
-    url = url + `${url.indexOf('?') === -1 ? '?' : '&'}lh_authinfo=${encodeURIComponent(window.localStorage.lh_authinfo)}&__platform=m`;
+    url = url + `${url.indexOf('?') === -1 ? '?' : '&'}lh_authinfo=${encodeURIComponent(window.localStorage.lh_authinfo)}&__platform=m&app=i-lanehub&version=3.0`;
     url = url + `&sign=${linsign.resignHash(url, params)}`;
     return apiAxios('POST', url, params);
   }

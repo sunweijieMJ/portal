@@ -13,7 +13,7 @@ button.addEventListener('click', () => {
   const mobile = document.querySelector('.form .mobile input').value;
   if((button.innerHTML !== '获取验证码') || !checkTel(mobile)) return;
   
-  Axios.get('/validate_code', { mobile }).then(res => {
+  Axios.get('/validate_code', { mobile, forgot:0 }).then(res => {
     let overTime = 60000;
     let timer = null;
     leftTime();
@@ -44,9 +44,9 @@ submit.addEventListener('click', () => {
   const code = document.querySelector('.form .code input').value;
 
   if(checkTel(mobile) && checkCode(code)) {
-    Axios.post('/dynamic_login', { mobile, code }).then(res => {
-      const params = { store_id: 2, mobile: 13818234979, service: parseUrl().service };
-      const url = `https://equipment.jxu.dev.weiheinc.com/api/portal/create_ticket?${linsign.urlConcat(params)}`;
+    Axios.post('/dynamic_login', { mobile, code}).then(res => {
+      const params = { store_id: 2, mobile, service: parseUrl().service };
+      const url = `https://equipment.weiheinc.com/api/portal/create_ticket?${linsign.urlConcat(params)}`;
       fetch(url, { method: 'GET' }).then(response => {
         response.json().then(res => {
           console.log(res);
